@@ -1,5 +1,9 @@
 FROM armv7/armhf-ubuntu
 
+RUN echo "Hello"
+
+RUN apt-get update
+
 RUN apt-get update && \
     apt-get install -y --force-yes build-essential cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev \
                     libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev \

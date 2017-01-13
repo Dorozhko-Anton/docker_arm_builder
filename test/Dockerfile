@@ -1,12 +1,8 @@
 FROM resin/rpi-raspbian
 
-RUN echo "Hello"
-
-RUN apt-get update
-
 RUN apt-get update && \
     apt-get install -y --force-yes build-essential cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev \
-                    libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev \
+                     libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev \
                     python2.7-dev python2.7-tk python2.7-numpy libopencv-dev wget unzip curl libboost-python-dev  && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* \

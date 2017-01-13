@@ -1,4 +1,4 @@
-FROM FROM resin/rpi-raspbian:wheezy
+FROM resin/rpi-raspbian
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \

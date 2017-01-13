@@ -1,4 +1,4 @@
-FROM FROM resin/rpi-raspbian
+FROM FROM resin/rpi-raspbian:wheezy
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
@@ -44,6 +44,7 @@ ENV PYCAFFE_ROOT $CAFFE_ROOT/python
 ENV PYTHONPATH $PYCAFFE_ROOT:$PYTHONPATH
 ENV PATH $CAFFE_ROOT/build/tools:$PYCAFFE_ROOT:$PATH
 RUN echo "$CAFFE_ROOT/build/lib" >> /etc/ld.so.conf.d/caffe.conf && ldconfig
+WORKDIR /
 
 RUN cd \
 	&& wget https://github.com/Itseez/opencv/archive/3.1.0.zip \

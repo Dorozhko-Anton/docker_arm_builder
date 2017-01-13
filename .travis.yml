@@ -6,9 +6,9 @@ script:
 # prepare qemu
 - docker run --rm --privileged multiarch/qemu-user-static:register --reset
 # build image
-- docker build -t adorozhko/rpi-camera .
+- docker build -t adorozhko/rpi-camera ./test/.
 # rpi-camera image
-- docker run adorozhko/rpi-camera bash -c "locate caffe"
+- docker run adorozhko/rpi-camera bash -c "echo hi"
 # push image
 - >
   if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then

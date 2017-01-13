@@ -1,4 +1,4 @@
-FROM armv7/armhf-ubuntu
+FROM resin/rpi-raspbian
 
 RUN echo "Hello"
 

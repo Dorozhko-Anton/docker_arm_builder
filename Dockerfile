@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         python-scipy \
         libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev \
         libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev \
-        python2.7-dev python2.7-tk python2.7-numpy libopencv-dev wget unzip curl libboost && \
+        python2.7-dev python2.7-tk python2.7-numpy libopencv-dev wget unzip curl && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* \
            /tmp/* \

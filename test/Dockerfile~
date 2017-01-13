@@ -1,0 +1,9 @@
+FROM resin/rpi-raspbian:wheezy
+
+<<<<<<< HEAD
+RUN apt-get update && apt-get install -y perl git --no-install-recommends && rm -rf /var/lib/apt/lists/*
+=======
+RUN apt-get install git
+>>>>>>> 293492f9a8e7ac277ffb43435eb33e0177673be3
+
+

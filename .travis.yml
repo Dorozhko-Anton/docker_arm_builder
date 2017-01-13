@@ -6,13 +6,13 @@ script:
 # prepare qemu
 - docker run --rm --privileged multiarch/qemu-user-static:register --reset
 # build image
-- docker build -t adorozhko/test ./test/
-# test image
-- docker run adorozhko/test bash -c "locate caffe"
+- docker build -t adorozhko/rpi-camera .
+# rpi-camera image
+- docker run adorozhko/rpi-camera bash -c "locate caffe"
 # push image
 - >
   if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
-    docker push adorozhko/test 
+    docker push adorozhko/rpi-camera 
   fi
 
